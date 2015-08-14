@@ -2,7 +2,7 @@
 
 ## Synopsis
 
-This projects consists of a python client that interacts with IBM Watson Speech To Text service through its WebSockets interface. The client streams audio to the STT service and receives recognition hypotheses in real time. It can run N simultaneous recognition sessions
+This project consists of a python client that interacts with the IBM Watson Speech To Text service through its WebSockets interface. The client streams audio to the STT service and receives recognition hypotheses in real time. It can run N simultaneous recognition sessions
 
 ## installation
 
