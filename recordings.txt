@@ -1,0 +1,10 @@
+./recordings/0001.wav
+./recordings/0002.wav
+./recordings/0003.wav
+./recordings/0004.wav
+./recordings/0005.wav
+./recordings/0006.wav
+./recordings/0007.wav
+./recordings/0008.wav
+./recordings/0009.wav
+./recordings/0010.wav
