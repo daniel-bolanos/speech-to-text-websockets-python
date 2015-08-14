@@ -256,7 +256,7 @@ if __name__ == '__main__':
    headers["Authorization"] = "Basic " + base64.b64encode(string)
 
    # create a WS server factory with our protocol
-   url = "wss://stream-s.watsonplatform.net/speech-to-text/api/v1/recognize?model=" + args.model
+   url = "wss://stream.watsonplatform.net/speech-to-text/api/v1/recognize?model=" + args.model
    summary = {}
    factory = WSInterfaceFactory(q, summary, args.dirOutput, args.contentType, args.model, url, headers, debug=False)
    factory.protocol = WSInterfaceProtocol

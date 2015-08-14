@@ -39,13 +39,13 @@ Finally, the version 0.10.3 of Autobahn comes with a bug/typo that you need to f
 The example below will run the default 10 WAV files through the WebSockets interface of the Speech To Text (STT) service and will dump the recognition hypotheses to a file under the "./output" directory.                           
                                                                                                                                                     
 `                                                                                                                                                   
-$ python ./sttClient.py -credentials <username>:<password>
+$ python ./sttClient.py -credentials <username>:<password> -model en-US_BroadbandModel
 `                                                                                                                                                   
                                                                                                                                                     
 The example below performs the same task much faster by opening 10 simultaneous recognition sessions (WebSocket connections) against the STT service.
                                                                                                                                                     
 `                                                                                                                                                   
-$ python ./sttClient.py -credentials <username>:<password> -threads 10
+$ python ./sttClient.py -credentials <username>:<password> -model en-US_BroadbandModel -threads 10
 `                                                                                                                                                   
  
 ## Options
