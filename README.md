@@ -26,10 +26,14 @@ $ pip install twisted --upgrade
 $ pip install autobahn --upgrade
 `
 
-Sometimes you may need to install some additional dependencies, check the following command:
+Sometimes you may need to install some additional dependencies, check the following commands:
 
 `
-apt-get install build-essential python-dev
+$ pip install pyOpenSSL
+`
+
+`
+$ apt-get install build-essential python-dev
 `
 
 Finally, the version 0.10.3 of Autobahn comes with a bug/typo that you need to fix by changing 'taxio' to 'txaio' in /usr/local/lib/python2.7/dist-packages/autobahn/websocket/protocol.py

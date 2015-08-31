@@ -94,6 +94,7 @@ class WSInterfaceProtocol(WebSocketClientProtocol):
       self.timeFirstInterim = -1
       self.bytesSent = 0
       self.chunkSize = 2000    # in bytes
+      super(self.__class__, self).__init__()
       print dirOutput
       print "contentType: " + str(self.contentType) + " queueSize: " + str(self.queue.qsize())
 
