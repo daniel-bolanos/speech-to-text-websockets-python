@@ -57,7 +57,7 @@ $ python ./sttClient.py -credentials <username>:<password> -model en-US_Broadban
 To see the list of available options type:
 
 `
-$ python stt.py -h
+$ python sttClient.py -h
 `
 
 ## Motivation
