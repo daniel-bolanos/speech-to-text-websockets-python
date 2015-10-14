@@ -149,7 +149,7 @@ class WSInterfaceProtocol(WebSocketClientProtocol):
       if isBinary:
          print("Binary message received: {0} bytes".format(len(payload)))         
       else:
-         print("Text message received: {0}".format(payload))  
+         print(u"Text message received: {0}".format(payload.decode('utf8')))  
 
          # if uninitialized, receive the initialization response from the server
          jsonObject = json.loads(payload.decode('utf8'))
