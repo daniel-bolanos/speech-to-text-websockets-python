@@ -104,6 +104,11 @@ class WSInterfaceProtocol(WebSocketClientProtocol):
       self.uttFilename = utt[1]
       self.summary[self.uttNumber] = {"hypothesis":"",
                                       "status":{"code":"", "reason":""}}
+      self.fileJson = self.dirOutput + "/" + str(self.uttNumber) + ".json.txt"
+      try:
+         os.remove(self.fileJson)
+      except OSError:
+         pass
 
    # helper method that sends a chunk of audio if needed (as required what the specified pacing is)
    def maybeSendChunk(self,data):
@@ -169,6 +174,12 @@ class WSInterfaceProtocol(WebSocketClientProtocol):
                print "empty hypothesis!"
             # regular hypothesis
             else: 
+               # dump the message to the output directory
+               jsonObject = json.loads(payload.decode('utf8'))
+               f = open(self.fileJson,"a")
+               f.write(json.dumps(jsonObject, indent=4, sort_keys=True))
+               f.close()
+
                hypothesis = jsonObject['results'][0]['alternatives'][0]['transcript']
                bFinal = (jsonObject['results'][0]['final'] == True)
                if bFinal:
